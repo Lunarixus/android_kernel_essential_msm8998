@@ -376,7 +376,11 @@ static int mdss_fb_get_panel_xres(struct mdss_panel_info *pinfo)
 		xres += mdss_fb_get_panel_xres(&pdata->next->panel_info);
 	if (pinfo->split_link_enabled)
 		xres = xres * pinfo->mipi.num_of_sublinks;
+#ifdef CONFIG_BOARD_MATA
+	return xres - 124;
+#else
 	return xres;
+#endif
 }
 
 static inline int mdss_fb_validate_split(int left, int right,
