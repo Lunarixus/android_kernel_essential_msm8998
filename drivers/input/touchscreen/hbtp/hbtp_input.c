@@ -22,7 +22,7 @@
 #include <linux/platform_device.h>
 #include <linux/regulator/consumer.h>
 #include <uapi/linux/hbtp_input.h>
-#include "../input-compat.h"
+#include "../../input-compat.h"
 #include <linux/ktime.h>
 #include <linux/uaccess.h>
 #include <linux/gpio.h>
